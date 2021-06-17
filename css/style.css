@@ -1,0 +1,171 @@
+/* Colors
+  #654321;
+  forestgreen;
+  saddlebrown;
+*/
+
+
+/* General */
+
+body {
+  background-image: url("../assets/minecraft-textures/bg-wool-light-transparent.png");
+  background-repeat: repeat;
+  
+  font-family:'MinecraftiaRegular';
+  font-weight:normal;
+  font-style:normal;
+}
+
+text {
+  font-family:'MinecraftiaRegular';
+  font-weight:normal;
+  font-style:normal;
+}
+
+h1 {
+  text-align:center;
+  color:black; 
+}
+
+h4, h5 {
+  text-align:center;
+  color:black;
+  padding-left:20px;
+  padding-right:20px;
+}
+
+a {
+  color:darkgreen;
+  text-decoration:none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Control Buttons */
+
+.button {
+  line-height: 30px;
+  /*width: auto;*/
+  display: inline-block;
+}
+
+#play-button {
+  font-family: 'MinecrafterAltRegular';
+  font-weight: normal;
+  font-style: normal;
+  
+  font-size:25px;
+  width:100px;
+  padding-left:20px;
+  padding-right:20px;
+  color:darkgreen;
+}
+
+#forward-button {
+  font-size:25px;
+  color:saddlebrown;
+}
+
+#backward-button {
+  font-size:25px;
+  color:saddlebrown;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+#play-button:hover {
+  font-size: 28px;
+  color:darkgreen;
+}
+
+#forward-button:hover {
+  font-size:29px;
+  color:saddlebrown;
+}
+
+#backward-button:hover {
+  font-size:29px;
+  color:saddlebrown;
+}
+
+/* Node Graph */
+
+svg {
+  background: transparent;
+}
+
+.image-border {
+  fill: transparent;
+  stroke: black;
+  stroke-width: 3px;
+}
+
+.label {
+  text-anchor: middle; 
+  fill: #444;
+}
+
+/* Hover Effects */
+
+.node-blurred {
+  opacity: 0.1;
+}
+
+.link-blurred {
+  opacity: 0.05;
+}
+
+.link-focused {
+  opacity: 0.7;
+}
+
+/* Slider */
+
+.slider {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.slider .slider_halo {
+  stroke: grey;
+  stroke-width: 8px;
+  stroke-linecap: round;
+}
+
+.slider_handle_change:hover{
+  width:38px;
+  height:38px;
+}
+
+/* Link Flow */
+
+.flowline {
+  stroke-dasharray: 78, 2;
+  animation: flow 6s linear infinite;
+  -webkit-animation: flow 6s linear infinite;
+}
+
+@keyframes flow {
+  from {
+    stroke-dashoffset: 80;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes flow {
+  from {
+    stroke-dashoffset: 80;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}

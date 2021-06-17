@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+	    <link rel="shortcut icon" href="#">
+		<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/minecraftia" type="text/css"/>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/minecraft" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://d3js.org/d3.v3.js"></script>
+	    <script src="https://d3js.org/queue.v1.min.js"></script>
+	</head>
+	<body>
+    <h1>Tracking Dream SMP's Twitch Viewership Movements</h1>
+    <h4>
+      Ever wondered how <a href="https://www.twitch.tv/" target="_blank">Twitch</a> viewers move between streamers, depending on who goes live? How do streamers' individual streaming habits affect the overall streaming landscape? How does Twitch viewership evolve through time? To answer these questions, I developed an interactive visualization of viewership movements between members of <a href="https://dreamteam.fandom.com/wiki/Dream_SMP" target="_blank">Dream SMP</a>'s <a href="https://www.minecraft.net/en-us" target="_blank">Minecraft</a> <a href="https://medium.com/the-emergence/a-guide-to-twitch-communities-4370b70dfa15" target="_blank">Twitch community</a>.
+    </h4>
+    <h4>Helpful Hints:</h4>
+    <h4 style="padding-bottom:10px">
+      &#8226; Hover over a <img src="assets/minecraft-steve/minecraft-steve-face.png" style="height:23px"> face to see how many viewers are currently watching the selected streamer.
+      <br>
+      &#8226; Hover over a <img src="assets/minecraft-textures/link.png" style="width:31px"> link to see how many viewers have moved from watching one streamer to another. 
+      <img src="assets/minecraft-textures/grass-block.png" style="height:30px;opacity:0">
+      <br>
+      &#8226; Drag the <img src="assets/minecraft-textures/grass-block.png" style="height:30px"> block on the slider to see how the streaming landscape changes over time.
+      <br>
+      &#8226; Press <span style="font-family:MinecrafterAltRegular;font-size:17px;color:darkgreen;">PLAY</span> to automatically step through all the available times.
+      <img src="assets/minecraft-textures/grass-block.png" style="height:30px;opacity:0">
+      <br>
+      &#8226; Press <i class="fa fa-backward" style="font-size:20px; color:saddlebrown;"></i> or <i class="fa fa-forward" style="font-size:20px; color:saddlebrown;"></i> to selectively step through each time.
+      <img src="assets/minecraft-textures/grass-block.png" style="height:30px;opacity:0">
+      <br><br>
+      <hr style="width:50px; height:5px; background:black;">
+    </h4>
+
+    <div style="text-align:center">
+      <div><svg id="slider-datetime" height="50" width="800"></svg></div>
+      <div style="height: 40px">
+        <i class="button fa fa-backward" id="backward-button"></i>
+        <div class="button" id="play-button">PLAY</div>
+        <i class="button fa fa-forward" id="forward-button"></i>
+      </div>
+      <div><svg id="slider-viz" height="100" width="875" overflow="visible"></svg></div>
+      <div><svg id="node-graph" height="875" width="800" overflow="visible"></svg></div>
+    </div>
+    
+    <div style="text-align:center">
+      Interactive Visualization by <a href="https://sabinachen.com/" target="_blank">Sabina Chen</a> &#169; May 2021
+      <br>
+      Inspired by <a href="https://github.com/KiranGershenfeld/VisualizingTwitchCommunities/tree/CloudCompute" target="_blank">Visualizing Twitch Communities</a>, <a href="https://www.reddit.com/r/dreamsmp/comments/k6mng7/the_dream_smp_relationship_chart/" target="_blank">Dream SMP Relationship Chart</a>, and <a href="http://bl.ocks.org/nitaku/1adb4033d7078f7d005e" target="_blank">Animated Sankey Links</a>
+      <br>
+      [ <a href="https://github.com/6859-sp21/final-project-twitch-viewership" target="_blank">GitHub Code</a> ] [ <a href="https://dev.twitch.tv/docs/api/" target="_blank">Data Source</a> ] [ <a href="https://minecraft.fandom.com/wiki/Minecraft_Wiki" target="_blank">Minecraft Assets</a> ] [ <a href="https://dreamteam.fandom.com/wiki/Dream_SMP" target="_blank">Dream SMP Assets</a> ]
+    </div>
+    
+		<script type="module" src="scripts/index.js"></script>
+	</body>
+</html>
